@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiymət Təklifi AI</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Left Column - Calculator -->
+            <div class="w-full lg:w-3/4 bg-white rounded-lg shadow-md">
+                <h1 class="text-4xl font-bold p-6">Qiymət Təklifi AI</h1>
+                
+                <!-- Static Pages Section -->
+                <div class="p-6 bg-white">
+                    <h2 class="text-xl font-bold mb-6">Statik səhifələr</h2>
+                    
+                    <div class="mb-8">
+                        <label class="text-sm mb-2 block">Neçə statik səhifə olacaq?</label>
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center justify-center bg-purple-500 text-white w-12 h-12 rounded-lg font-bold">
+                                1
+                            </div>
+                            <div class="relative flex-grow">
+                                <input type="range" min="1" max="20" value="1" id="pageSlider" 
+                                    class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer">
+                                <div class="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                    <div id="pageSliderProgress" class="h-2 bg-purple-500 rounded-full" style="width: 1%;"></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center bg-purple-500 text-white w-12 h-12 rounded-lg font-bold">
+                                20
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <label>Dizayn mürəkkəblik:</label>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 text-center">Sadə</div>
+                            <div class="relative flex-grow">
+                                <input type="range" min="1" max="3" value="1" id="designComplexitySlider" 
+                                    class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer">
+                                <div class="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                    <div id="designComplexityProgress" class="h-2 bg-purple-500 rounded-full" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                            <div class="w-16 text-center">Orta</div>
+                            <div class="w-16 text-center">Xüsusi</div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded-md flex justify-between items-center">
+                        <div class="font-medium text-gray-700">Xərc:</div>
+                        <div class="text-purple-600 font-bold"><span id="pageCount">1</span> səhifə / ₼ <span id="pagePrice">100</span></div>
+                    </div>
+                </div>
+                
+                <!-- Web Type Options -->
+                <div class="p-6 bg-white border-t border-gray-100">
+                    <h2 class="text-xl font-bold mb-6">Veb sayt əlavələri</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="webTypeOptions">
+                        <!-- Options will be added dynamically -->
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-md flex justify-between items-center mt-6">
+                        <div class="font-medium text-gray-700">Xərc:</div>
+                        <div class="text-purple-600 font-bold">₼ <span id="webTypeTotal">0</span></div>
+                    </div>
+                </div>
+                
+                <!-- SEO Options -->
+                <div class="p-6 bg-white border-t border-gray-100">
+                    <h2 class="text-xl font-bold mb-6">Axtarış motorunun optimallaşdırılması</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="seoOptions">
+                        <!-- Options will be added dynamically -->
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-md flex justify-between items-center mt-6">
+                        <div class="font-medium text-gray-700">Xərc:</div>
+                        <div class="text-purple-600 font-bold">₼ <span id="seoTotal">0</span></div>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Options -->
+                <div class="p-6 bg-white border-t border-gray-100">
+                    <h2 class="text-xl font-bold mb-6">Elektron ticarət əlavələri</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="ecommerceOptions">
+                        <!-- Options will be added dynamically -->
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-md flex justify-between items-center mt-6">
+                        <div class="font-medium text-gray-700">Xərc:</div>
+                        <div class="text-purple-600 font-bold">₼ <span id="ecommerceTotal">0</span></div>
+                    </div>
+                </div>
+                
+                <!-- Logo Design -->
+                <div class="p-6 bg-white border-t border-gray-100">
+                    <h2 class="text-xl font-bold mb-6">Logo dizaynı</h2>
+                    <div class="flex justify-between mb-2">
+                        <div>Ehtiyac yoxdur</div>
+                        <div>Sadə</div>
+                        <div>Xüsusi</div>
+                    </div>
+                    <div class="relative mb-6">
+                        <input type="range" min="0" max="100" value="0" id="logoSlider" 
+                            class="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer">
+                        <div class="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                            <div id="logoSliderProgress" class="h-2 bg-purple-500 rounded-full" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-md flex justify-between items-center">
+                        <div class="font-medium text-gray-700">Cost:</div>
+                        <div class="text-purple-600 font-bold">₼ <span id="logoTotal">0</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Summary -->
+            <div class="w-full lg:w-1/4">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-semibold mb-6">Təklifiniz</h2>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-1">
+                            <span>Statik səhifələr:</span>
+                            <span class="text-purple-600 font-bold">₼ <span id="summaryPages">100</span></span>
+                        </div>
+                        <div class="flex justify-between items-center py-1">
+                            <span>Əlavələr:</span>
+                            <span class="text-purple-600 font-bold">₼ <span id="summaryFunctions">0</span></span>
+                        </div>
+                        <div class="flex justify-between items-center py-1">
+                            <span>SEO:</span>
+                            <span class="text-purple-600 font-bold">₼ <span id="summarySEO">0</span></span>
+                        </div>
+                        <div class="flex justify-between items-center py-1">
+                            <span>E-ticarət:</span>
+                            <span class="text-purple-600 font-bold">₼ <span id="summaryEcommerce">0</span></span>
+                        </div>
+                        <div class="flex justify-between items-center py-1">
+                            <span>Logo dizaynı:</span>
+                            <span class="text-purple-600 font-bold">₼ <span id="summaryLogo">0</span></span>
+                        </div>
+                        <div class="flex justify-between items-center py-1 mt-4 border-t border-gray-200 pt-4">
+                            <span>Qeyd:</span>
+                            <div class="text-right">
+                                <span class="text-gray-500 text-sm">Minimum sayt qiyməti</span>
+                                <span class="text-purple-600 font-bold block">₼ <span id="minimumPrice">450</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-purple-500 text-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-lg font-semibold mb-2">Ümumi təxmini dəyəri:</h2>
+                    <div class="text-2xl font-bold text-right">
+                        ₼ <span id="totalPrice">450</span>
+                    </div>
+                </div>
+                
+                <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg transition">
+                    Saytınızı İndi Sifariş Edin
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
