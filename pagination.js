@@ -63,6 +63,14 @@ const sites = [
         url: "https://api.websiteca.com/storage/F1dmQj4FgeeUXLxfRPSBI8ftmELJuCtsWCF1kHOj.png",
         title: "qarmon.az"
     },
+    {
+        url: "https://api.websiteca.com/storage/jZI68lSJ4mkBfuzPd5jD5hOvcbweYv8046gfQO9f.png",
+        title: "naftalansanatoriya.com"
+    },
+    {
+        url: "https://api.websiteca.com/storage/gcY5xpQUdl0l1w08pdcojI3lYKIOpbRsTA7I59SP.png",
+        title: "docfarhad.az"
+    },
 ]
 
 document.addEventListener('DOMContentLoaded', function() {
