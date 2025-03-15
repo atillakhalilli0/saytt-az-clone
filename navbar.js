@@ -72,7 +72,8 @@ const navelements = {
         },
         {
             icon: '<i class="fa-solid fa-calculator"></i>',
-            title: 'Sayt Kalkulyatoru'
+            title: 'Sayt Kalkulyatoru',
+            url: 'https://saytt-az-clone.vercel.app/calc.html'  // Added URL for calculator
         },
         {
             icon: '<i class="fa-solid fa-magnifying-glass-chart"></i>',
@@ -145,13 +146,26 @@ document.querySelectorAll("[data-dropdown-label]").forEach(label => {
         dropdownMenu.classList.toggle("hidden");
 
         dropdownMenu.innerHTML = navelements[dropdownKey]
-            .map(item => `
-                <div class="flex items-center gap-5 px-3 py-2 hover:bg-gray-100 cursor-pointer text-gray-800">
-                    <div class="bg-blue-100 py-2 px-3 text-purple-700 text-xl rounded-lg">${item.icon}</div>
-                    <div>
-                        <p class="text-lg font-normal">${item.title}</p>
-                    </div>
-                </div>`)
+            .map(item => {
+                // Check if this item has a URL (specifically for calculator)
+                if (item.url) {
+                    return `
+                        <a href="${item.url}" class="flex items-center gap-5 px-3 py-2 hover:bg-gray-100 cursor-pointer text-gray-800">
+                            <div class="bg-blue-100 py-2 px-3 text-purple-700 text-xl rounded-lg">${item.icon}</div>
+                            <div>
+                                <p class="text-lg font-normal">${item.title}</p>
+                            </div>
+                        </a>`;
+                } else {
+                    return `
+                        <div class="flex items-center gap-5 px-3 py-2 hover:bg-gray-100 cursor-pointer text-gray-800">
+                            <div class="bg-blue-100 py-2 px-3 text-purple-700 text-xl rounded-lg">${item.icon}</div>
+                            <div>
+                                <p class="text-lg font-normal">${item.title}</p>
+                            </div>
+                        </div>`;
+                }
+            })
             .join("")
     })
 })
@@ -199,29 +213,40 @@ document.querySelectorAll("[data-mobile-dropdown-label]").forEach(label => {
         
         if (!dropdownMenu.innerHTML.trim()) {
             dropdownMenu.innerHTML = navelements[dropdownKey]
-                .map(item => `
-                    <div class="flex items-center gap-3 py-2 cursor-pointer text-gray-800">
-                        <div class="bg-blue-100 py-1 px-2 text-purple-700 text-base rounded-lg">${item.icon}</div>
-                        <p class="text-base font-normal">${item.title}</p>
-                    </div>`)
+                .map(item => {
+                    // Check if this item has a URL (specifically for calculator)
+                    if (item.url) {
+                        return `
+                            <a href="${item.url}" class="flex items-center gap-3 py-2 cursor-pointer text-gray-800">
+                                <div class="bg-blue-100 py-1 px-2 text-purple-700 text-base rounded-lg">${item.icon}</div>
+                                <p class="text-base font-normal">${item.title}</p>
+                            </a>`;
+                    } else {
+                        return `
+                            <div class="flex items-center gap-3 py-2 cursor-pointer text-gray-800">
+                                <div class="bg-blue-100 py-1 px-2 text-purple-700 text-base rounded-lg">${item.icon}</div>
+                                <p class="text-base font-normal">${item.title}</p>
+                            </div>`;
+                    }
+                })
                 .join("")
         }
     })
 })
 
 const circle = document.getElementById('animated-circle')
-    let position = 0
-    let direction = 1
+let position = 0
+let direction = 1
       
-    function animate() {
+function animate() {
     position += 0.01 * direction
         
     if (position >= 1) {
         direction = -1
         position = 1
     } else if (position <= 0) {
-          direction = 1
-          position = 0
+        direction = 1
+        position = 0
     }
         
     const yPos = 1 + (position * 45)
