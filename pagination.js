@@ -4,42 +4,65 @@ const sites = [
         title: "biophysics.az"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/Mupn6xSf0FTlbBj0ilDZAqXuLiLrwFGjZct4gQLH.png",
         title: "ureb.com"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/ZYfooZQ12g9cwbdUYdc9wEsHDXjshxZmRmQB5z9h.png",
         title: "ug.news"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/2MQEImHKxKRLKbEGPUt9xQY2QiSlQw1gWE7RdkKm.png",
         title: "football.biz"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/mMkkjJ32v64o4mN5tuMBvn7SWWkd1dPBBM1ZBzE2.png",
         title: "wisher.az"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/7ZV1bRucrPWExvpsJqLyFiELk7fHAOk6ZtPVHpNl.png",
         title: "imexcommodites.com"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/l7CnTnqSgXj1XA2ZMFtVvo4E8j2nZ4wgElrDehh7.png",
         title: "azfennttq.az"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/vjciI2KyS5K2wrvpm1JlLFKdcd7WlG4wB0GTlItY.png",
         title: "notehub.az"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/7g8cGPiEFNN7KfmRLC7Hes27A0xj9UD85yxLjSXZ.png",
         title: "azeholidays.az"
     },
     {
-        url: "https://api.websiteca.com/storage/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png",
+        url: "https://api.websiteca.com/storage/J0npE6PgAdvfSUmaUYdqdbQHplamTsx4RiOGB7wJ.png",
         title: "vipconsulting.az"
-    }
-    // ...more data 
+    },
+    {
+        url: "https://api.websiteca.com/storage/2Nr06VCFo72kSNXyGBNM6Vp8sl95xifE8PDKUnXO.png",
+        title: "zemed.az"
+    },
+    {
+        url: "https://api.websiteca.com/storage/STK6FPMjjvSWhL030mPfPDDzeUFvpoAEKVSYfgkw.png",
+        title: "esco.az"
+    },
+    {
+        url: "https://api.websiteca.com/storage/oHGuQndVvObtojo1JtE49ALXsbAcUSxsj5M56Qf3.png",
+        title: "caspilimo.com"
+    },
+    {
+        url: "https://api.websiteca.com/storage/XzKhKHLtvsO8AtHomdKnhWMZp4r7FKMyXkWwrlqG.png",
+        title: "baymak.az"
+    },
+    {
+        url: "https://api.websiteca.com/storage/tKp5LvACzbuA7RTDYVhRO3Jvq60x2JZjzq7lYVZK.png",
+        title: "seljannovruzlu.com"
+    },
+    {
+        url: "https://api.websiteca.com/storage/F1dmQj4FgeeUXLxfRPSBI8ftmELJuCtsWCF1kHOj.png",
+        title: "qarmon.az"
+    },
 ]
 
 document.addEventListener('DOMContentLoaded', function() {
