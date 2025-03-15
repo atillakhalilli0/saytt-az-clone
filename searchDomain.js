@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Set the select option to the clicked domain extension
             if (domainExtensionSelect) {
-                // Find the matching option
                 for (let i = 0; i < domainExtensionSelect.options.length; i++) {
                     if (domainExtensionSelect.options[i].value === domainExtension) {
                         domainExtensionSelect.selectedIndex = i;
@@ -39,19 +38,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const domainName = domainSearchInput.value.trim();
             const extension = domainExtensionSelect.value;
             
-            if (!domainName) {
-                alert('Zəhmət olmasa domen adını daxil edin');
+            // Validate domain name
+            const domainRegex = /^[a-zA-Z0-9-]{4,}$/;
+            if (!domainRegex.test(domainName)) {
+                alert('Domen adı yalnız hərflər, rəqəmlər və "-" simvolunu ehtiva edə bilər və ən azı 4 hərf olmalıdır.');
                 return;
             }
             
-            // You can redirect to a search results page or perform an AJAX request here
             console.log(`Searching for ${domainName}${extension}`);
             
             // Example: Simulate search result
             const resultContainer = document.createElement('div');
             resultContainer.className = 'mt-4 p-4 bg-white rounded-lg shadow';
 
-            // Tek bir rastgele değer belirliyoruz
             const isAvailable = Math.random() > 0.5;
             const statusText = isAvailable ? 'Əlçatandır' : 'Artıq mövcuddur';
             const statusColor = isAvailable ? 'text-green-500' : 'text-red-500';
