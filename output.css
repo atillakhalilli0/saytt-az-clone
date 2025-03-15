@@ -1176,6 +1176,10 @@ video {
   gap: 2rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2059,6 +2063,10 @@ video {
     margin-bottom: 8rem;
   }
 
+  .md\:ml-0 {
+    margin-left: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2125,6 +2133,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:mb-40 {
     margin-bottom: 10rem;
+  }
+
+  .lg\:ml-\[300px\] {
+    margin-left: 300px;
   }
 
   .lg\:w-1\/3 {
